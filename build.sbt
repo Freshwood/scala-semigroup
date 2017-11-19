@@ -3,23 +3,13 @@
 // *****************************************************************************
 
 lazy val `scala-semigroup` =
-  (project in file("client/akka-http"))
+  (project in file("."))
     .settings(settings)
     .settings(
       libraryDependencies ++= Seq(
         library.scalaTest % Test
       )
     )
-
-lazy val root = (project in file("."))
-  .settings(settings)
-  .settings(
-    name := "scala-semigroup-project",
-    aggregate in update := false,
-    publishArtifact := false
-  )
-  .aggregate(`scala-semigroup`)
-
 
 // *****************************************************************************
 // Library dependencies
